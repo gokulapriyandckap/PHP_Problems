@@ -11,7 +11,14 @@ function miniMaxSum($arr) {
     if($values !== $min){
         $sumOfMin += $values;
     }
+    if ($min == $max) {
+        $sumOfMax += $values;
+        $sumOfMin += $values; 
+    }
   }
-return $sumOfMax." ".$sumOfMin;
+  if ($min == $max) {
+    return $sumOfMax - $max." ".$sumOfMin - $min;
+  }
+    return $sumOfMax ." ".$sumOfMin ;
 }
-echo miniMaxSum([1,2,3,4,5]);
+echo miniMaxSum([5,5,5,5,5]);
