@@ -2,6 +2,11 @@
 
  function returnNegative($num)
 {
-    return $num * -1;
+    if ($num > 0) {
+          return $num * -1;
+    }
+    else{
+        return $num;
+    }
 }
-echo returnNegative(5);
+echo returnNegative(-5);
